@@ -6,8 +6,8 @@ RUN echo 'deb http://archive.scrapy.org/ubuntu scrapy main' | tee /etc/apt/sourc
 RUN apt-get update && apt-get install -y \
     python python-dev python-distribute python-pip scrapy-0.24 scrapyd
 
-ADD requirements.txt /src/requirements.txt
-RUN pip install -r /src/requirements.txt
+ADD requirements.txt /requirements.txt
+RUN pip install -r /requirements.txt
 
 VOLUME ["/var/log/scrapyd", "/var/lib/scrapyd"]
 
