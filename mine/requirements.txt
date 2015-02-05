@@ -1,4 +1,0 @@
-Flask
-uwsgi
-redis
-elasticsearch
