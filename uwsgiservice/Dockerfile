@@ -32,4 +32,4 @@ COPY supervisord.conf /etc/supervisor/supervisord.conf
 
 EXPOSE 22
 
-CMD ["/usr/bin/supervisord"]
+CMD ["/usr/local/bin/supervisord"]
