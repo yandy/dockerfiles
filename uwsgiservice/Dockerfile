@@ -30,6 +30,6 @@ RUN sed -ri 's/#UsePAM no/UsePAM no/g' /etc/ssh/sshd_config
 
 COPY supervisord.conf /etc/supervisor/supervisord.conf
 
-EXPOSE 22
+EXPOSE 22 8080 9000
 
 CMD ["/usr/local/bin/supervisord", "-c", "/etc/supervisor/supervisord.conf"]
