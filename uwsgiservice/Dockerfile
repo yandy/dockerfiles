@@ -23,6 +23,7 @@ RUN set -x \
 
 RUN adduser --disabled-password --home=/home/deployer deployer
 
+RUN apt-get install -y openssh-server
 RUN mkdir -p /var/run/sshd
 RUN sed -ri 's/UsePAM yes/#UsePAM yes/g' /etc/ssh/sshd_config
 RUN sed -ri 's/#UsePAM no/UsePAM no/g' /etc/ssh/sshd_config
