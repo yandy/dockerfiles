@@ -22,4 +22,4 @@ jobs:
         with:
           context: ./kaniko
           push: true
-          tags: yandy0725/kaniko:v1.9.1
+          tags: yandy0725/kaniko:v1.9.1-debug
