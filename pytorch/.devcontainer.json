@@ -1,0 +1,47 @@
+{
+	"name": "Pytorch",
+	"build": {
+		"dockerfile": "dev.Dockerfile"
+	},
+
+	// =======================
+	// recommended settings for devcontainer use:
+
+	"runArgs": ["--gpus", "all"],
+
+	// Configure tool-specific properties.
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			// Set *default* container specific settings.json values on container create.
+			"settings": {
+				"python.defaultInterpreterPath": "/usr/bin/python",
+				"python.linting.enabled": true,
+				"python.linting.pylintEnabled": true,
+				"python.formatting.autopep8Path": "/usr/local/bin/autopep8",
+				"python.formatting.blackPath": "/usr/local/bin/black",
+				"python.formatting.yapfPath": "/usr/local/bin/yapf",
+				"python.linting.banditPath": "/usr/local/bin/bandit",
+				"python.linting.flake8Path": "/usr/local/bin/flake8",
+				"python.linting.mypyPath": "/usr/local/bin/mypy",
+				"python.linting.pycodestylePath": "/usr/local/bin/pycodestyle",
+				"python.linting.pydocstylePath": "/usr/local/bin/pydocstyle",
+				"python.linting.pylintPath": "/usr/local/bin/pylint"
+			},
+
+			// Add the IDs of extensions you want installed when the container is created.
+			"extensions": [
+				"ms-python.python"
+			]
+		}
+	},
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "pip3 install --user -r requirements.txt",
+
+	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+	"remoteUser": "vscode"
+}
