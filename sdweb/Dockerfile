@@ -10,8 +10,8 @@ RUN set -eux; \
     ; \
     rm -rf /var/lib/apt/lists/* ;\
     wget -O sdweb.tar.gz "https://github.com/AUTOMATIC1111/stable-diffusion-webui/archive/refs/tags/v${SD_VERSION}.tar.gz"; \
-    mkdir -p /opt/sdweb; \
-    tar --gzip --extract --directory /opt/sdweb --file sdweb.tar.gz; \
+    mkdir -p /opt/sdweb/stable-diffusion-webui; \
+    tar --gzip --extract --directory /opt/sdweb/stable-diffusion-webui --strip-components=1 --file sdweb.tar.gz; \
     rm sdweb.tar.gz
 
 COPY webui.sh /usr/local/bin/webui.sh
