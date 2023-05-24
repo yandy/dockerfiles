@@ -20,6 +20,6 @@ COPY webui.sh /usr/local/bin/webui.sh
 
 RUN set -eux; \
     cd /opt/sdweb; \
-    webui.sh --exit --skip-torch-cuda-test
+    webui.sh --exit --skip-torch-cuda-test --xformers
 
 WORKDIR /opt/sdweb
