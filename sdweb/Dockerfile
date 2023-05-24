@@ -4,7 +4,7 @@ ENV SD_VERSION=1.2.1
 
 RUN set -eux; \
     apt-get update; \
-    apt-get install -y --no-install-recommends \
+    DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
         wget \
         git \
         build-essential \
