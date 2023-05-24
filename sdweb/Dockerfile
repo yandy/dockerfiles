@@ -7,6 +7,8 @@ RUN set -eux; \
     apt-get install -y --no-install-recommends \
         wget \
         git \
+        build-essential \
+        python3-opencv \
     ; \
     rm -rf /var/lib/apt/lists/* ;\
     wget -O sdweb.tar.gz "https://github.com/AUTOMATIC1111/stable-diffusion-webui/archive/refs/tags/v${SD_VERSION}.tar.gz"; \
