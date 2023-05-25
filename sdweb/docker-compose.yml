@@ -1,0 +1,23 @@
+version: "3"
+services:
+  sdweb:
+    image: yandy0725/sdweb:latest
+    command:
+      - "webui.sh"
+      - "--skip-install"
+      - "--listen"
+      - "--port"
+      - "8086"
+    ports:
+      - "8086:8086"
+    volumes:
+      - "./outputs:/opt/sdweb/stable-diffusion-webui/outputs"
+      - "./extensions:/opt/sdweb/stable-diffusion-webui/extensions"
+      - "./models:/opt/sdweb/stable-diffusion-webui/models"
+      - "./embeddings:/opt/sdweb/stable-diffusion-webui/embeddings"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              capabilities: [gpu]
