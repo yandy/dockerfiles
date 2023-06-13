@@ -5,6 +5,7 @@ services:
     command:
       - "webui.sh"
       - "--skip-install"
+      - "--xformers"
       - "--listen"
       - "--port"
       - "8086"
